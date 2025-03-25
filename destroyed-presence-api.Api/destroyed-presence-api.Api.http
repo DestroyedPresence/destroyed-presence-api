@@ -1,0 +1,6 @@
+@destroyed_presence_api.Api_HostAddress = http://localhost:5226
+
+GET {{destroyed_presence_api.Api_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
