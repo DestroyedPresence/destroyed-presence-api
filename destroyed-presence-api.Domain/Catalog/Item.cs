@@ -45,6 +45,7 @@ namespace destroyed.presence.Domain.Catalog
     Description = description;
     Brand = brand;
     Price = price;
+    this.Ratings = new List<Rating>();
 }
 
     }
