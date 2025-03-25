@@ -11,7 +11,7 @@ namespace destroyed.presence.Domain.Catalog
         public decimal Price { get; set; }
 
         
-        public List<Rating> Ratings { get; set; } = new List<Rating>();
+        public List<Rating>? Ratings { get; set; } = new List<Rating>();
 
         public void AddRating(Rating rating)
 {
