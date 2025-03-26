@@ -1,15 +1,20 @@
 using Microsoft.AspNetCore.Mvc;
 using destroyed.presence.Domain.Catalog;
-
+using destroyed.presence.Data;
 namespace destroyed.presence.Api.Controllers
 {
     [ApiController]
     [Route("[controller]")]
     public class CatalogController : ControllerBase
     {
+        private readonly StoreContext_db;
+        public CatalogController(StoreContext db ){
+            _db = db;
+        }
         [HttpGet]
 public IActionResult GetItems()
 {
+    return Ok(_db.Items);
     var items = new List<Item>()
     {
         new Item("Shirt", "Ohio State shirt.", "Nike", 29.99m),
