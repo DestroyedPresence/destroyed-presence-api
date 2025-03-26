@@ -13,6 +13,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\destroyed-presence-api.Domain\destroyed-presence-api.Domain.csproj" />
+    <ProjectReference Include="..\destroyed-presence-api.Data\destroyed-presence-api.Data.csproj" />
   </ItemGroup>
 
 </Project>
