@@ -1,4 +1,4 @@
-namespace destroyed.presence.Domain.Catalog;
+namespace destroyed_presence_api.Domain.Catalog;
 
     public class Rating
     {

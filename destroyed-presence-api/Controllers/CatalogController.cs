@@ -1,21 +1,22 @@
 using Microsoft.AspNetCore.Mvc;
-using destroyed.presence.Domain.Catalog;
-using destroyed.presence.Data;
-using Microsoft.AspNetCore.Http.Features;
-namespace destroyed.presence.Api.Controllers
+using Microsoft.EntityFrameworkCore;
+using destroyed_presence_api.Domain.Catalog;  
+using destroyed_presence_api.Data;
+
+namespace destroyed_presence_api.Controllers
 {
     [ApiController]
     [Route("[controller]")]
     public class CatalogController : ControllerBase
     {
-        private readonly StoreContext_db;
+        private readonly StoreContext _db;
         public CatalogController(StoreContext db ){
             _db = db;
         }
         [HttpGet]
 public IActionResult GetItems()
 {
-    return Ok(_db.Items);
+    
     var items = new List<Item>()
     {
         new Item("Shirt", "Ohio State shirt.", "Nike", 29.99m),
@@ -37,13 +38,16 @@ public IActionResult GetItems()
 [HttpGet("{id:int}")]
 public IActionResult GetItem(int id)
 {
-    return Ok(_db.Items.Find(id));
+    var item = _db.Items.Find(id);
+
     if (item == null)
     {
         return NotFound();
     }
-    return Ok();
+
+    return Ok(item);
 }
+
 
 // [HttpPost]
 // public IActionResult Post(Item item)
@@ -54,7 +58,7 @@ public IActionResult GetItem(int id)
 [HttpPost]
 public IActionResult Post(Item item)
 {
-    _db.Items.Add(item)
+    _db.Items.Add(item);
     _db.SaveChanges();
     return Created($"/catalog/{item.Id}", item);
 }

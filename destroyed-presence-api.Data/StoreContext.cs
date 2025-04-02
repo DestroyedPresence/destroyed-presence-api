@@ -1,6 +1,8 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using destroyed.presence.Domain.Catalog;
-using Emerald.Tiger.Data;
+using destroyed_presence_api.Domain.Catalog;
+using destroyed.presence.Domain.Orders;
+
+using destroyed_presence_api.Data;
 
 
 namespace destroyed_presence_api.Data;
@@ -14,7 +16,7 @@ public class StoreContext:DbContext
     {}
     public DbSet<Item> Items {get;set;}
 
-    public DbSet<Order> orders { get; set; }
+    public DbSet<Orders> Orders { get; set; }
     protected override void OnModelCreating(ModelBuilder builder)
     {
         base.OnModelCreating(builder);

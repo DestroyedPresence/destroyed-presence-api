@@ -6,7 +6,7 @@ namespace Detroyed_Presence;
 
 public class StoreContextFactory : IDesignTimeDbContextFactory<StoreContext>
 {
-    public StoreContext CreatedDbContext(string[] args)
+    public StoreContext CreateDbContext(string[] args)
     {
         var optionsBuilder = new DbContextOptionsBuilder<StoreContext>();
         optionsBuilder.UseSqlite("Data Source=../Registrar.sqlite");

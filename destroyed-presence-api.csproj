@@ -10,7 +10,12 @@
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.Mvc" Version="2.3.0" />
     <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="9.0.1" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="9.0.3" />
     <PackageReference Include="microsoft.EntityFrameworkCore.sqlite" Version="9.0.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="destroyed-presence-api.Domain\destroyed-presence-api.Domain.csproj" />
   </ItemGroup>
 
 </Project>

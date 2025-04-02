@@ -1,8 +1,9 @@
-using destroyed.presence.Domain.Catalog;
-using Emerald.Tiger.Domain.Catalog;
+using destroyed_presence_api.Domain.Catalog;
 using Microsoft.EntityFrameworkCore;
+using destroyed_presence_api.Data;
 
-namespace Emerald.Tiger.Data
+
+namespace destroyed_presence_api.Data
 {
     public static class DbInitializer
     {
