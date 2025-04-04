@@ -11,6 +11,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "destroyed-presence-api.Data
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "destroyed-presence-api", "destroyed-presence-api\destroyed-presence-api.csproj", "{C6295A9A-D08F-4633-96EB-FABB4935932D}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{7316F087-3BE0-4BFC-A681-B8895FA6D204}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "destroyed-presence-api.Domain.Tests", "tests\destroyed-presence-api.Domain.Tests\destroyed-presence-api.Domain.Tests.csproj", "{0F12CC89-A38E-449E-8F89-C92FA4D674DA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -36,5 +40,12 @@ Global
 		{C6295A9A-D08F-4633-96EB-FABB4935932D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C6295A9A-D08F-4633-96EB-FABB4935932D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C6295A9A-D08F-4633-96EB-FABB4935932D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0F12CC89-A38E-449E-8F89-C92FA4D674DA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0F12CC89-A38E-449E-8F89-C92FA4D674DA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0F12CC89-A38E-449E-8F89-C92FA4D674DA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0F12CC89-A38E-449E-8F89-C92FA4D674DA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{0F12CC89-A38E-449E-8F89-C92FA4D674DA} = {7316F087-3BE0-4BFC-A681-B8895FA6D204}
 	EndGlobalSection
 EndGlobal

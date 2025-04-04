@@ -1,8 +1,9 @@
 using System.Collections.Generic;
 using System.Linq;
-using destroyed.presence.Domain.Catalog;
+using destroyed_presence_api.Domain.Catalog;
 
-namespace Destroyed.Presence.Orders
+
+namespace destroyed.presence.Domain.Orders
 {
     public class Orders{
         public int Id { get; set; }
