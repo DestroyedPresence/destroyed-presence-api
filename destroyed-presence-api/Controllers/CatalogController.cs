@@ -2,6 +2,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using destroyed_presence_api.Domain.Catalog;  
 using destroyed_presence_api.Data;
+using Microsoft.AspNetCore.Authorization;
 
 namespace destroyed_presence_api.Controllers
 {
@@ -117,7 +118,9 @@ public IActionResult PutItem(int id, [FromBody] Item item)
 //     return NoContent();
 // }
 
+[Authorize("delete:catalog")]
 [HttpDelete("{id:int}")]
+
 public IActionResult DeleteItem(int id)
 {
     var item = _db.Items.Find(id);
